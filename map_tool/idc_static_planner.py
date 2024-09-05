@@ -4,9 +4,9 @@ import argparse
 import matplotlib.pyplot as plt
 
 from dataclasses import dataclass
-from gops.utils.map_tool.idc_maploader import MapBase, RefPath
+from map_tool.idc_maploader import MapBase, RefPath
 from typing import List
-from gops.utils.map_tool.utils import *
+from map_tool.utils import *
 
 class IDCStaticPlanner:
     def __init__(self, **kwargs) -> None:
@@ -94,9 +94,9 @@ class IDCStaticPlanner:
         return concat_ref_paths(path_list)
 
 
-if __name__ == "__main__":
+def static_test():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--map_path", type=str, default="./map/crossroads_map_refined.json")
+    parser.add_argument("--map_path", type=str, default="./maps/crossroads_map_refined.json")
     args = parser.parse_args()
 
     planner = IDCStaticPlanner(map_path=args.map_path)
@@ -145,8 +145,12 @@ if __name__ == "__main__":
         ref_paths_discrete.append(ref_path_discrete)
         plt.plot(ref_path_discrete.path[0], ref_path_discrete.path[1], 'b')
 
-    plt.savefig("test_static_planner_global.png", dpi=300)    
+    plt.savefig("test_static_planner_global.png", dpi=300)   
+    return
 
+if __name__ == "__main__":
+ 
+    pass
 
 
 

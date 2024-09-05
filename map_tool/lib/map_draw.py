@@ -8,11 +8,11 @@ from matplotlib import colors as mcolors
 import matplotlib.pyplot as plt
 
 
-import gops.utils.map_tool.proto.hdmap_pb2 as hdmap_pb2
+import map_tool.proto.hdmap_pb2 as hdmap_pb2
 import google.protobuf.text_format as text_format
 from google.protobuf import json_format
 
-from gops.utils.map_tool.lib.map_base import MapBase
+from map_tool.lib.map_base import MapBase
 
 
 class Map(MapBase):
@@ -22,13 +22,13 @@ class Map(MapBase):
         self.init_colors()
         self.map_name = "map"
 
-    def load(self, map_file_name, attach_map_name=None):
-        super().load(map_file_name)
-        # if attach_map_name is not None:
-        #     with open(attach_map_name, "r", encoding="utf-8") as f:
-        #         json_obj = json.load(f)
+    # def load(self, map_file_name, attach_map_name=None):
+    #     super().load(map_file_name)
+    #     if attach_map_name is not None:
+    #         with open(attach_map_name, "r", encoding="utf-8") as f:
+    #             json_obj = json.load(f)
 
-        #     json_str = json.dumps(json_obj, indent=4)
+    #         json_str = json.dumps(json_obj, indent=4)
 
     def load_hd(self, traffic_map):
         self.map_pb = traffic_map.hdmap

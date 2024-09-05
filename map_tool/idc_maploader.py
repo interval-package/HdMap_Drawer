@@ -6,12 +6,12 @@ from matplotlib import cm as cmx
 import matplotlib.pyplot as plt
 from matplotlib import colors as mcolors
 
-import gops.utils.map_tool.proto.hdmap_pb2 as hdmap_pb2
+import map_tool.proto.hdmap_pb2 as hdmap_pb2
 import google.protobuf.text_format as text_format
 from google.protobuf import json_format
 from dataclasses import dataclass
 from typing import List
-from gops.utils.map_tool.utils import *
+from map_tool.utils import *
 
 class MapBase:
     def __init__(self) -> None:

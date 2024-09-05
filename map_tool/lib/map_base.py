@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from matplotlib import colors as mcolors
 import matplotlib.pyplot as plt
 
-import gops.utils.map_tool.proto.hdmap_pb2 as hdmap_pb2
+import map_tool.proto.hdmap_pb2 as hdmap_pb2
 import google.protobuf.text_format as text_format
 from google.protobuf import json_format
 

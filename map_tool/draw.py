@@ -1,4 +1,4 @@
-from lib.map import Map
+from map_tool.lib.map_draw import Map
 
 SHOW_LINK_BOUNDARY = False
 SHOW_ID = True
